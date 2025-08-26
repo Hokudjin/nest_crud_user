@@ -39,4 +39,9 @@ export class UsersService {
         if (index === -1) throw new NotFoundException(`User #${id} not found`);
         this.users.splice(index, 1);
     }
+
+    findByEmail(email: string) {
+        return this.users.find((u) => u.email === email);
+    }
+
 }

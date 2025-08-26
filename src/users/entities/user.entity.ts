@@ -13,6 +13,8 @@ export class User {
     @ApiProperty({ example: 'alex@example.com' })
     email: string;
 
+    password: string; // зберігаємо хеш паролю
+
     @ApiProperty({ example: true })
     isActive: boolean;
 }
